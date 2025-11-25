@@ -7,18 +7,50 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 	<Grid>
-		<ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,15,628,253" SelectionChanged="ListBox_SelectionChanged"/>
-		<ComboBox HorizontalAlignment="Left" Margin="189,34,0,0" VerticalAlignment="Top" Width="120"/>
-
-		<RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="499,40,0,0" VerticalAlignment="Top"/>
-		<Button Content="Button" HorizontalAlignment="Left" Margin="664,37,0,0" VerticalAlignment="Top"/>
+		<ListBox x:Name="listBoxTesztak"
+		         Margin="10,15,628,253"
+		         SelectionChanged="ListBox_SelectionChanged">
+			<ListBoxItem Content="Vékony"/>
+			<ListBoxItem Content="Normál"/>
+			<ListBoxItem Content="Extra vastag"/>
+		</ListBox>
+		<ComboBox x:Name="comboBoxMeret"
+		          HorizontalAlignment="Left"
+		          Margin="189,34,0,0"
+		          VerticalAlignment="Top"
+		          Width="120"
+		          SelectedIndex="0">
+			<ComboBoxItem Content="Kicsi"/>
+			<ComboBoxItem Content="Közepes"/>
+			<ComboBoxItem Content="Nagy"/>
+		</ComboBox>
+		<RadioButton x:Name="radioButtonHazhoz"
+		             Content="Házhozszállítás"
+		             HorizontalAlignment="Left"
+		             Margin="499,40,0,0"
+		             VerticalAlignment="Top"
+		             GroupName="Atvetel"/>
+		<RadioButton x:Name="radioButtonSzemelyes"
+		             Content="Személyes átvétel"
+		             HorizontalAlignment="Left"
+		             Margin="499,70,0,0"
+		             VerticalAlignment="Top"
+		             GroupName="Atvetel"/>
+		<Button x:Name="buttonOsszegzes"
+		        Content="Rendelés összefoglalása"
+		        HorizontalAlignment="Left"
+		        Margin="664,37,0,0"
+		        VerticalAlignment="Top"
+		        Click="buttonOsszegzes_Click"/>
 		<StackPanel Margin="318,22,330,282">
-			<CheckBox x:Name="checkBoxSajt" Content="Sajt"/>
-			<CheckBox x:Name="checkBoxSonka" Content="Sonka"/>
-			<CheckBox x:Name="checkBoxGomba" Content="Gomba"/>
-			<CheckBox x:Name="checkBoxOlivabogyo" Content="OlíviaBogyó"/>
-			<CheckBox x:Name="checkBoxKukorica" Content="KukorIca"/>
+			<CheckBox x:Name="checkBoxSajt" Content="Sajt" IsChecked="True"/>
+			<CheckBox x:Name="checkBoxSonka" Content="Sonka" IsChecked="False"/>
+			<CheckBox x:Name="checkBoxGomba" Content="Gomba" IsChecked="False"/>
+			<CheckBox x:Name="checkBoxOlivabogyo" Content="Olívabogyó" IsChecked="False"/>
+			<CheckBox x:Name="checkBoxKukorica" Content="Kukorica" IsChecked="True"/>
 		</StackPanel>
-
+		<Label x:Name="labelOsszegzes"
+		       Margin="10,300,10,10"
+		       FontSize="14"/>
 	</Grid>
 </Window>
