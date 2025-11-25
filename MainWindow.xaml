@@ -13,12 +13,11 @@
 		<RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="499,40,0,0" VerticalAlignment="Top"/>
 		<Button Content="Button" HorizontalAlignment="Left" Margin="664,37,0,0" VerticalAlignment="Top"/>
 		<StackPanel Margin="318,22,330,282">
-			<CheckBox Content="CheckBox"/>
-			<CheckBox Content="CheckBox"/>
-			<CheckBox Content="CheckBox"/>
-			<CheckBox Content="CheckBox"/>
-			<CheckBox Content="CheckBox"/>
-			<CheckBox Content="CheckBox"/>
+			<CheckBox x:Name="checkBoxSajt" Content="Sajt"/>
+			<CheckBox x:Name="checkBoxSonka" Content="Sonka"/>
+			<CheckBox x:Name="checkBoxGomba" Content="Gomba"/>
+			<CheckBox x:Name="checkBoxOlivabogyo" Content="OlíviaBogyó"/>
+			<CheckBox x:Name="checkBoxKukorica" Content="KukorIca"/>
 		</StackPanel>
 
 	</Grid>
