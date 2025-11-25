@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:Pizza"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+	<Grid>
+		<ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,15,628,253" SelectionChanged="ListBox_SelectionChanged"/>
+		<ComboBox HorizontalAlignment="Left" Margin="189,34,0,0" VerticalAlignment="Top" Width="120"/>
 
-    </Grid>
+		<RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="499,40,0,0" VerticalAlignment="Top"/>
+		<Button Content="Button" HorizontalAlignment="Left" Margin="664,37,0,0" VerticalAlignment="Top"/>
+		<StackPanel Margin="318,22,330,282">
+			<CheckBox Content="CheckBox"/>
+			<CheckBox Content="CheckBox"/>
+			<CheckBox Content="CheckBox"/>
+			<CheckBox Content="CheckBox"/>
+			<CheckBox Content="CheckBox"/>
+			<CheckBox Content="CheckBox"/>
+		</StackPanel>
+
+	</Grid>
 </Window>
